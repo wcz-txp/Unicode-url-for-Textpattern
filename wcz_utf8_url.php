@@ -42,11 +42,11 @@ Adjust Textpattern->Advanced Options->“Maximum URL length (in characters)” t
     See: http://www.gnu.org/licenses/gpl.html
 
     Version history:
-    0.1.4		- Minor fix of preserving already existing dashes/minuses
-    0.1.3		- Added remove small words
-    0.1.2		- Minor fixes with double dashes and trimming the url string
-    0.1.1		- Minor fixes
-    0.1.0		- Initial release
+    0.1.4		- minor fix of preserving already existing dashes/minuses
+    0.1.3		- added remove small words
+    0.1.2		- minor fixes with double dashes and trimming the url string
+    0.1.1		- minor fixes
+    0.1.0		- initial release
 
 */
 
