@@ -14,13 +14,13 @@ Features
 
 Version history:
 
-0.1.6 - Minor fix autodetect charset in mb_strlower
-0.1.5 - Minor fix for mb_strlower and charset
-0.1.4 - minor fix of preserving already existing dashes/minuses
-0.1.3 - added remove small words
-0.1.2 - minor fixes with double dashes and trimming the url string
-0.1.1 - minor fixes
-0.1.0 - initial release
+   0.1.6 - Minor fix autodetect charset in mb_strlower
+   0.1.5 - Minor fix for mb_strlower and charset
+   0.1.4 - minor fix of preserving already existing dashes/minuses
+   0.1.3 - added remove small words
+   0.1.2 - minor fixes with double dashes and trimming the url string
+   0.1.1 - minor fixes
+   0.1.0 - initial release
 
 Requirements
 
