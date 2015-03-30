@@ -10,11 +10,11 @@
 // file name. Uncomment and edit this line to override:
 $plugin['name'] = 'wcz_utf8_url';
 
-$plugin['version'] = '0.1.4';
+$plugin['version'] = '0.1.6';
 $plugin['author'] = 'whocarez';
 $plugin['author_uri'] = '';
 $plugin['description'] = 'Automatic UTF-8 permlinks';
-$plugin['type'] = 1; // 0 for regular plugin; 1 if it includes admin-side code
+$plugin['type'] = 5; // 0 for regular plugin; 1 if it includes admin-side code
 $plugin['order'] = 5; # use 5 as a default; ranges from 1 to 9
 
 
@@ -38,14 +38,13 @@ Adjust Textpattern->Advanced Options->“Maximum URL length (in characters)” t
 
     Written by whocarez with help of the Textpattern Community
 
-    Released under the GNU General Public License 3
-    See: http://www.gnu.org/licenses/gpl.html
-
     Version history:
-    0.1.4		- minor fix of preserving already existing dashes/minuses
-    0.1.3		- added remove small words
-    0.1.2		- minor fixes with double dashes and trimming the url string
-    0.1.1		- minor fixes
+    0.1.6		  Minor fix autodetect charset in mb_strlower
+    0.1.5		  Minor fix for mb_strlower and charset
+    0.1.4		  Minor fix of preserving already existing dashes/minuses
+    0.1.3		- Added remove small words
+    0.1.2		- Minor fixes with double dashes and trimming the url string
+    0.1.1		- Minor fixes
     0.1.0		- initial release
 
 */
@@ -67,7 +66,7 @@ function wcz_utf8_url($event,$step,$text) {
 $text = trim(preg_replace("/(^|-)(([\p{Ll}\p{Lu}\p{Lt}\p{Lo}]{1,3})(?<!new|wer|wen|wie|was|wo|wem|how|who|zug|uni|job|gps|bus|tod|tot|eko|öko|eu|dai|gai|hiv|df|ing|ua|upa|oun|omv|otp|ss|umc|twi|tvi|usa|uno|bio|see|kuh|fuß|not|kot|tür|sex|uhu|rat|dvd|cd|tau|rot|tor|tat|bit|sau|ehe|gut|mfg|ard|zdf|rtl|mdr|tee|uhr|zoo|zeh|rss|xml|pdf|axt|fan|nuß|neu|fkk|aal|bug|ost|alt|rom|ddr|fdj|sed|kgb|fbi|cia|sbu|ohr|age|ece|bip|mts|gus|ntn|cme|ntn|iwf|wto|scm|man|uah|eon|nbu|obi|tv|isd|ilo|akw|who|ooo|stb|gas|em))(?=-|$)/ui","", $text),"-");
 // Remove all non-whitelisted characters
     $text = preg_replace("/[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\-_]/u","",$text);
-    $text = trim(mb_strtolower($text),'-');
+    $text = trim(mb_strtolower($text,mb_detect_encoding($text)),'-');
     return $text;
 }
 
@@ -77,6 +76,7 @@ foreach($rs as $a)
 safe_update('textpattern',"url_title='".sanitizeForUrl($a['Title'])."'","Title='".doSlash($a['Title'])."'");
 
 }
+
 
 # --- END PLUGIN CODE ---
 
