@@ -8,19 +8,20 @@ textpattern plugin wcz_utf8_url – uses UTF-8 permlinks instead of transliterat
 Features
 
     automatically handles non ASCII characters
-    integrated function for updating all of your existing titles – backup first!!!, use on your OWN risk —> <txp:update_urls />
+    integrated function for updating all of your existing titles – backup first!!!, 
+    use on your OWN risk —> <txp:update_urls />
     works with German, Russian, Ukrainian (on live sites)
     tested with Japanese
 
 Version history:
 
-   0.1.6 - Minor fix autodetect charset in mb_strlower
-   0.1.5 - Minor fix for mb_strlower and charset
-   0.1.4 - minor fix of preserving already existing dashes/minuses
-   0.1.3 - added remove small words
-   0.1.2 - minor fixes with double dashes and trimming the url string
-   0.1.1 - minor fixes
-   0.1.0 - initial release
+    0.1.6 - Minor fix autodetect charset in mb_strlower
+    0.1.5 - Minor fix for mb_strlower and charset
+    0.1.4 - minor fix of preserving already existing dashes/minuses
+    0.1.3 - added remove small words
+    0.1.2 - minor fixes with double dashes and trimming the url string
+    0.1.1 - minor fixes
+    0.1.0 - initial release
 
 Requirements
 
