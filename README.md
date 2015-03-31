@@ -11,10 +11,11 @@ Features
     integrated function for updating all of your existing titles – backup first!!!, 
     use on your OWN risk —> <txp:update_urls />
     works with German, Russian, Ukrainian (on live sites)
-    tested with Japanese
+    tested with Japanese, Farsi, Arabic
 
 Version history:
 
+    0.1.7 - fixed error with right-to-left languages
     0.1.6 - Minor fix autodetect charset in mb_strlower
     0.1.5 - Minor fix for mb_strlower and charset
     0.1.4 - minor fix of preserving already existing dashes/minuses
