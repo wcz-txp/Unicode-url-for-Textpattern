@@ -1,7 +1,6 @@
 h1. Unicode-url-for-Textpattern
 
-- Summary :=
-textpattern plugin wcz_utf8_url – uses UTF-8 permlinks instead of transliterated ones for SEO
+- Summary := textpattern plugin wcz_utf8_url – uses UTF-8 permlinks instead of transliterated ones for SEO
 
 - Features :=
 
